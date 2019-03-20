@@ -70,8 +70,8 @@ export interface VimeoCuePoint {
     id: string;
 }
 
-export interface VimeoCuePointData extends Object {
-    customKey: string;
+export interface VimeoCuePointData {
+    [key: string]: any;
 }
 
 export interface VimeoTextTrack {
@@ -111,6 +111,4 @@ export interface VimeoPromise<Result, Reason> extends Promise<Result> {
 }
 
 /*~ You can declare properties of the module using const, let, or var */
-export const playerMap: WeakMap<any, any>;
-export const readyMap: WeakMap<any, any>;
 export default Player;
